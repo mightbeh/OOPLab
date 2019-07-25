@@ -1,0 +1,39 @@
+import javaprg1;
+import java.io.*;
+import java.util.*;
+public class Javaprg1 {
+
+    public static void main(String[] args)throws IOException {
+        int n,p;
+        Scanner o1 = new Scanner (System.in);
+        //System.out.print("Enter no. EB Bills : ");
+        //p = o1.nextInt();
+        okk o2[] = new okk[5];
+        for(int i=0;i<2;i++)
+        {    
+            o2[i] = new okk();
+            o2[i].getinfo(i); 
+            System.out.print("Enter type of EB connection.... ");
+            System.out.print("(1.domestic//2.commercial) : ");
+            n = o1.nextInt();
+            if(n==1)
+            {
+                o2[i].domestic();
+            }
+            else if(n==2)
+            {
+                o2[i].commercial();
+            }
+        }
+        System.out.println("  ============================================== ");
+        System.out.println("    TAMIL NADU ELECTRICITY BOARD - COIMBATORE"); 
+        System.out.println("  ============================================== ");
+        for(int i=0;i<2;i++)
+        {
+            o2[i].coninfo(i);
+                    
+        }
+                
+        
+    }
+}
